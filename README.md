@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Finance Tracker
 
-## Getting Started
+A comprehensive web application for tracking personal finances, built with Next.js and Tailwind CSS.
 
-First, run the development server:
+## Features 
 
+- ✅ **Income & Expense Tracking**: Add transactions with amount, date, category, and notes
+- ✅ **Financial Overview**: View total income, expenses, and current balance
+- ✅ **Categorization**: Organize transactions by predefined categories
+- ✅ **Filtering**: Filter transactions by type (income/expense) or view all
+- ✅ **Sorting**: Transactions automatically sorted by date (newest first)
+- ✅ **Data Persistence**: All data stored in browser localStorage
+- ✅ **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- ✅ **Transaction Management**: Delete transactions with one click
+
+## Frame Work used and others
+
+- Next.js 14 (App Router)
+- React 18
+- Tailwind CSS
+- LocalStorage API
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js 18+ pre installed
+- npm 
+
+### Installation
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Open browser and navigate to:
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build for Production
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## How to Use
 
-To learn more about Next.js, take a look at the following resources:
+### Adding a Transaction
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Select transaction type (Income or Expense)
+2. Enter the amount
+3. Choose a category from the dropdown
+4. Select the date
+5. Add optional notes
+6. Click "Add Transaction"
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Viewing Transactions
 
-## Deploy on Vercel
+- All transactions are displayed below the form
+- Transactions are sorted by date (newest first)
+- Income transactions have a green indicator
+- Expense transactions have a red indicator
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Filtering Transactions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Use the filter buttons to view:
+- **All**: Shows all transactions
+- **Income**: Shows only income transactions
+- **Expense**: Shows only expense transactions
+
+### Deleting Transactions
+
+Click the "×" button on any transaction to remove it
+
+### Data Persistence
+
+- All data is automatically saved to your browser's localStorage
+- Your transactions will persist even after closing the browser
+- Data is device-specific and stored locally
+
+## Categories
+
+### Income Categories
+- Salary
+- Freelance
+- Business
+- Other
+
+### Expense Categories
+- Food
+- Transport
+- Shopping
+- Bills
+- Entertainment
+- Other
+
+## Browser Compatibility
+
+- Chrome (recommended)
+- and others
+
+## Known Limitations
+
+- Data is stored locally and not synced across devices
+- No user authentication (single-user application)
+- No data backup/export feature
+
+## Future Enhancements
+
+- Charts for visual data representation
+- CSV export functionality
+- Multiple user support with authentication
+- Cloud data synchronization
+- Budget setting and tracking
+- Recurring transactions
+- Custom categories
+
+## Developer
+
+Akinwamide Bukunmi Abiodun - Web3Bridge Cohort XIII
+
+## License
+
+This project was created as part of the Web3Bridge Pre-Qualification Exercise.
+
+
+**Live Demo**: [https://personal-finance-tracker-blond-kappa.vercel.app/]
+
+**Repository**: [https://github.com/Omoboi-coder/Personal-Finance-Tracker]
