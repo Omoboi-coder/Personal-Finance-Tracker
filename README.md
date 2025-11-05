@@ -123,7 +123,7 @@ Click the "×" button on any transaction to remove it
 
 ## Developer
 
-Akinwamide Bukunmi Abiodun - Web3Bridge Cohort XIII
+Akinwamide Bukunmi Abiodun - Web3Bridge Cohort XIV
 
 ## License
 
