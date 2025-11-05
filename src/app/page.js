@@ -42,6 +42,17 @@ function addTransaction(e) {
 // Update form tag
 <form onSubmit={addTransaction} className="space-y-4"></form>
 
+const totalIncome = transactions
+  .filter(t => t.type === 'income')
+  .reduce((sum, t) => sum + t.amount, 0);
+
+const totalExpense = transactions
+  .filter(t => t.type === 'expense')
+  .reduce((sum, t) => sum + t.amount, 0);
+
+const balance = totalIncome - totalExpense;
+
+
   return (
     <div className="min-h-screen bg-gray-100 py-8 px-4">
       <div className="max-w-4xl mx-auto">
@@ -49,6 +60,21 @@ function addTransaction(e) {
           Personal Finance Tracker
         </h1>
 
+        {/* Summary Cards */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div className="bg-green-500 text-white p-6 rounded-lg shadow">
+    <h3 className="text-lg font-semibold">Total Income</h3>
+    <p className="text-3xl font-bold">${totalIncome.toFixed(2)}</p>
+  </div>
+  <div className="bg-red-500 text-white p-6 rounded-lg shadow">
+    <h3 className="text-lg font-semibold">Total Expense</h3>
+    <p className="text-3xl font-bold">${totalExpense.toFixed(2)}</p>
+  </div>
+  <div className="bg-blue-500 text-white p-6 rounded-lg shadow">
+    <h3 className="text-lg font-semibold">Balance</h3>
+    <p className="text-3xl font-bold">${balance.toFixed(2)}</p>
+  </div>
+</div>
         {/* Add Transaction Form */}
         <div className="bg-white p-6 rounded-lg shadow-md mb-8">
           <h2 className="text-2xl font-bold mb-4">Add Transaction</h2>
